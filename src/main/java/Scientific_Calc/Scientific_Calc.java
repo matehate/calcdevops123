@@ -46,7 +46,7 @@ public class Scientific_Calc
             if(choice== calculator.num_func)break;
             switch(choice)
             {
-                case 1:
+                case 0:
                     num[0] = sc.nextDouble();
                     System.out.println(calculator.sqrot(num[0]));
             }
