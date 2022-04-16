@@ -2,7 +2,7 @@ pipeline
 {
     environment
     {
-        registry="matehate/calcdevops123:v{$BUILD_ID}"
+        registry="matehate/calcdevops123:v{$BUILD_NUMBER}"
         registry_credential="SPE_Docker"
         dockerimage=""
     }
