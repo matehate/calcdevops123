@@ -39,9 +39,10 @@ public class Scientific_Calc
                 System.out.println("Please enter the correct input");
                 continue;
             }
-            if(choice>calculator.num_func || choice<=0)
+            if(choice>calculator.num_func || choice<0)
             {
                 System.out.println("Invalid choice");
+                continue;
             }
             if(choice== calculator.num_func)break;
             switch(choice)
