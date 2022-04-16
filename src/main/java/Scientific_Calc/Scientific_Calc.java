@@ -29,6 +29,8 @@ public class Scientific_Calc
         double num[] = new double[2];
         do
         {
+            System.out.println("Enter 0 for square root of a number");
+            System.out.println("Enter "+calculator.num_func+" for exit");
             int choice;
             try
             {
@@ -49,7 +51,13 @@ public class Scientific_Calc
             {
                 case 0:
                     num[0] = sc.nextDouble();
+                    if(num[0]<0)
+                    {
+                        System.out.println("Enter a non negative number !!");
+                        break;
+                    }
                     System.out.println(calculator.sqrot(num[0]));
+                    break;
             }
         }while(true);
     }
