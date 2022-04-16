@@ -1,7 +1,7 @@
 ---
 - name: Pull docker image of Calculator
   hosts: all
-  become: yes
+ 
   tasks:
   - name: getting access
       cmd: chmod 777 /var/run/docker.sock
