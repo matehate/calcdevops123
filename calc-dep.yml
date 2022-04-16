@@ -3,8 +3,6 @@
   hosts: all
  
   tasks:
-  - name: getting access
-      cmd: chmod 777 /var/run/docker.sock
     - name: Pull docker image
       docker_image:
         name: matehate/calcdevops123
