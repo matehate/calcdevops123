@@ -5,5 +5,5 @@
   tasks:
     - name: Pull docker image
       docker_image:
-        name: matehate/calcdevops123:v7
+        name: matehate/calcdevops123:v8
         source: pull
