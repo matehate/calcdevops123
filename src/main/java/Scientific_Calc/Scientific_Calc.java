@@ -13,7 +13,7 @@ public class Scientific_Calc
     private final int num_func;
     public Scientific_Calc()
     {
-        num_func = 1;
+        num_func = 2;
     }
 
     public double sqrot(double num)
@@ -23,14 +23,24 @@ public class Scientific_Calc
         log_file.info("[OUTPUT- Sq ROOT] - " + res);
         return res;
     }
+
+    public int factorial(int num)
+    {
+        log_file.info("[Factorial] - "+num);
+        int res = 1;
+        for(int i=1;i<=num;i++)
+            res*=i;
+        log_file.info("[OUTPUT- Factorial] - " + res);
+        return res;
+    }
     public static void main(String [] args)
     {
         Scientific_Calc calculator = new Scientific_Calc();
         Scanner sc = new Scanner(System.in);
-        double num[] = new double[2];
         do
         {
             System.out.println("Enter 0 for square root of a number");
+            System.out.println("Enter 1 for factorial of a number");
             System.out.println("Enter "+calculator.num_func+" for exit");
             int choice;
             try
@@ -51,13 +61,24 @@ public class Scientific_Calc
             switch(choice)
             {
                 case 0:
-                    num[0] = sc.nextDouble();
-                    if(num[0]<0)
+                    double num;
+                    num = sc.nextDouble();
+                    if(num<0)
                     {
                         System.out.println("Enter a non negative number !!");
                         break;
                     }
-                    System.out.println(calculator.sqrot(num[0]));
+                    System.out.println("Output - "+calculator.sqrot(num));
+                    break;
+                case 1:
+                    int number;
+                    number = sc.nextInt();
+                    if(number<0)
+                    {
+                        System.out.println("Enter a non negative number !!");
+                        break;
+                    }
+                    System.out.println("Output - "+calculator.factorial(number));
                     break;
             }
         }while(true);
