@@ -15,7 +15,7 @@ public class Scientific_Calc
     {
         num_func = 2;
     }
-
+    //testing GitSCM polling after 500 server error
     public double sqrot(double num)
     {
         log_file.info("[Sq ROOT] - "+num);
