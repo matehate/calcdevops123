@@ -35,4 +35,32 @@ public class Scientific_Calc_Test
         assertNotEquals("Finding factorial for True Negative", 0, calc.factorial(0), DIFF);
         assertNotEquals("Finding factorial for True Negative", 1, calc.factorial(2), DIFF);
     }
+
+    @Test
+    public void logTruePositive()
+    {
+        assertEquals("Finding natural log for True Positive", 0, calc.natural_log(1), DIFF);
+        assertEquals("Finding natural log for True Positive", 0, calc.natural_log(1), DIFF);
+    }
+
+    @Test
+    public void logTrueNegative()
+    {
+        assertNotEquals("Finding natural log for True Negative", 4, calc.natural_log(1), DIFF);
+        assertNotEquals("Finding natural log for True Negative", 1, calc.natural_log(10), DIFF);
+    }
+
+    @Test
+    public void powTruePositive()
+    {
+        assertEquals("Finding power for True Positive", 16, calc.power(2,4), DIFF);
+        assertEquals("Finding power for True Positive", 1, calc.power(1,6), DIFF);
+    }
+
+    @Test
+    public void powTrueNegative()
+    {
+        assertNotEquals("Finding power for True Negative", 3, calc.power(1,3), DIFF);
+        assertNotEquals("Finding power for True Negative", 6, calc.power(2,3), DIFF);
+    }
 }

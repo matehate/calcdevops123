@@ -13,7 +13,7 @@ public class Scientific_Calc
     private final int num_func;
     public Scientific_Calc()
     {
-        num_func = 2;
+        num_func = 4;
     }
     //testing GitSCM polling
     //one more trial
@@ -34,6 +34,22 @@ public class Scientific_Calc
         log_file.info("[OUTPUT- Factorial] - " + res);
         return res;
     }
+
+    public double natural_log(double num)
+    {
+        log_file.info("[Nat LOG] - "+num);
+        double res = Math.log(num);
+        log_file.info("[OUTPUT- Nat LOG] - " + res);
+        return res;
+    }
+
+    public double power(double num1, double num2)
+    {
+        log_file.info("[Power] - "+num1+" "+num2);
+        double res = Math.pow(num1,num2);
+        log_file.info("[OUTPUT- Power] - " + res);
+        return res;
+    }
     public static void main(String [] args)
     {
         Scientific_Calc calculator = new Scientific_Calc();
@@ -42,6 +58,9 @@ public class Scientific_Calc
         {
             System.out.println("Enter 0 for square root of a number");
             System.out.println("Enter 1 for factorial of a number");
+            System.out.println("Enter 2 for natural log of a number");
+            System.out.println("Enter 3 for number raised to another number");
+
             System.out.println("Enter "+calculator.num_func+" for exit");
             int choice;
             try
@@ -80,6 +99,21 @@ public class Scientific_Calc
                         break;
                     }
                     System.out.println("Output - "+calculator.factorial(number));
+                    break;
+                case 3:
+                    double num1, num2;
+                    num1 = sc.nextDouble();
+                    num2 = sc.nextDouble();
+                    System.out.println("Output - "+calculator.power(num1,num2));
+                    break;
+                case 2:
+                    num = sc.nextDouble();
+                    if(num<=0)
+                    {
+                        System.out.println("Enter a positive number !!");
+                        break;
+                    }
+                    System.out.println("Output - "+calculator.natural_log(num));
                     break;
             }
         }while(true);
